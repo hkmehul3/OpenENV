@@ -1,0 +1,15 @@
+cat > openenv.yaml << EOF
+name: incident-response
+description: SRE incident response - triage production incidents
+tasks:
+  - name: db-timeout
+    difficulty: easy
+    correct_action: restart_service
+  - name: traffic-spike
+    difficulty: medium  
+    correct_action: scale_up
+  - name: buggy-deploy
+    difficulty: hard
+    correct_action: rollback
+version: 1.0.0
+spec: openenv/1.0.0
